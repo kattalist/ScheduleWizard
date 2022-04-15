@@ -103,5 +103,10 @@ namespace ScheduleWizard
             User.activeUser.CreateXML($"activeuser.xml");
             User.activeUser.CreateXML($"{User.activeUser.FirstName}{User.activeUser.LastName}.xml");
         }
+
+        private void btnAddClass_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
