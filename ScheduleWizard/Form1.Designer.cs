@@ -59,7 +59,16 @@
             this.Test = new System.Windows.Forms.Label();
             this.btnAddClass = new System.Windows.Forms.Button();
             this.btnEditClass = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.modifyClassPanel = new System.Windows.Forms.Panel();
+            this.modifyClassLabel = new System.Windows.Forms.Label();
+            this.editClassDropdown = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.classCodeTextBox = new System.Windows.Forms.TextBox();
+            this.classCodeLabel = new System.Windows.Forms.Label();
+            this.enterInfoLabel = new System.Windows.Forms.Label();
+            this.classNameTextBox = new System.Windows.Forms.TextBox();
+            this.classNameLabel = new System.Windows.Forms.Label();
+            this.classLocTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.classSchedPanel.SuspendLayout();
             this.classDisplayPanel5.SuspendLayout();
@@ -67,6 +76,7 @@
             this.classDisplayPanel3.SuspendLayout();
             this.classDisplayPanel2.SuspendLayout();
             this.classDisplayPanel1.SuspendLayout();
+            this.modifyClassPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -443,13 +453,121 @@
             this.btnEditClass.TabIndex = 3;
             this.btnEditClass.Text = "Edit/remove a class";
             this.btnEditClass.UseVisualStyleBackColor = true;
+            this.btnEditClass.Click += new System.EventHandler(this.btnEditClass_Click);
             // 
-            // panel2
+            // modifyClassPanel
             // 
-            this.panel2.Location = new System.Drawing.Point(723, 151);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(477, 649);
-            this.panel2.TabIndex = 4;
+            this.modifyClassPanel.Controls.Add(this.classLocTextBox);
+            this.modifyClassPanel.Controls.Add(this.classNameLabel);
+            this.modifyClassPanel.Controls.Add(this.classNameTextBox);
+            this.modifyClassPanel.Controls.Add(this.enterInfoLabel);
+            this.modifyClassPanel.Controls.Add(this.classCodeLabel);
+            this.modifyClassPanel.Controls.Add(this.classCodeTextBox);
+            this.modifyClassPanel.Controls.Add(this.label1);
+            this.modifyClassPanel.Controls.Add(this.editClassDropdown);
+            this.modifyClassPanel.Controls.Add(this.modifyClassLabel);
+            this.modifyClassPanel.Location = new System.Drawing.Point(723, 151);
+            this.modifyClassPanel.Name = "modifyClassPanel";
+            this.modifyClassPanel.Size = new System.Drawing.Size(477, 649);
+            this.modifyClassPanel.TabIndex = 4;
+            // 
+            // modifyClassLabel
+            // 
+            this.modifyClassLabel.AutoSize = true;
+            this.modifyClassLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyClassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.modifyClassLabel.Location = new System.Drawing.Point(14, 8);
+            this.modifyClassLabel.Name = "modifyClassLabel";
+            this.modifyClassLabel.Size = new System.Drawing.Size(221, 45);
+            this.modifyClassLabel.TabIndex = 0;
+            this.modifyClassLabel.Text = "Modify a class";
+            // 
+            // editClassDropdown
+            // 
+            this.editClassDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.editClassDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.editClassDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editClassDropdown.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editClassDropdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.editClassDropdown.FormattingEnabled = true;
+            this.editClassDropdown.Location = new System.Drawing.Point(173, 83);
+            this.editClassDropdown.Name = "editClassDropdown";
+            this.editClassDropdown.Size = new System.Drawing.Size(292, 25);
+            this.editClassDropdown.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(19, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Select a class to modify:";
+            // 
+            // classCodeTextBox
+            // 
+            this.classCodeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.classCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classCodeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classCodeTextBox.Location = new System.Drawing.Point(173, 161);
+            this.classCodeTextBox.Name = "classCodeTextBox";
+            this.classCodeTextBox.Size = new System.Drawing.Size(291, 25);
+            this.classCodeTextBox.TabIndex = 3;
+            // 
+            // classCodeLabel
+            // 
+            this.classCodeLabel.AutoSize = true;
+            this.classCodeLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classCodeLabel.Location = new System.Drawing.Point(96, 164);
+            this.classCodeLabel.Name = "classCodeLabel";
+            this.classCodeLabel.Size = new System.Drawing.Size(71, 17);
+            this.classCodeLabel.TabIndex = 4;
+            this.classCodeLabel.Text = "Class code";
+            // 
+            // enterInfoLabel
+            // 
+            this.enterInfoLabel.AutoSize = true;
+            this.enterInfoLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.enterInfoLabel.Location = new System.Drawing.Point(17, 121);
+            this.enterInfoLabel.Name = "enterInfoLabel";
+            this.enterInfoLabel.Size = new System.Drawing.Size(272, 30);
+            this.enterInfoLabel.TabIndex = 5;
+            this.enterInfoLabel.Text = "Enter your class information";
+            // 
+            // classNameTextBox
+            // 
+            this.classNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.classNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classNameTextBox.Location = new System.Drawing.Point(173, 198);
+            this.classNameTextBox.Name = "classNameTextBox";
+            this.classNameTextBox.Size = new System.Drawing.Size(291, 25);
+            this.classNameTextBox.TabIndex = 6;
+            // 
+            // classNameLabel
+            // 
+            this.classNameLabel.AutoSize = true;
+            this.classNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classNameLabel.Location = new System.Drawing.Point(93, 201);
+            this.classNameLabel.Name = "classNameLabel";
+            this.classNameLabel.Size = new System.Drawing.Size(74, 17);
+            this.classNameLabel.TabIndex = 7;
+            this.classNameLabel.Text = "Class name";
+            // 
+            // classLocTextBox
+            // 
+            this.classLocTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.classLocTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classLocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classLocTextBox.Location = new System.Drawing.Point(173, 235);
+            this.classLocTextBox.Name = "classLocTextBox";
+            this.classLocTextBox.Size = new System.Drawing.Size(291, 25);
+            this.classLocTextBox.TabIndex = 8;
             // 
             // Form1
             // 
@@ -457,7 +575,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.modifyClassPanel);
             this.Controls.Add(this.btnEditClass);
             this.Controls.Add(this.btnAddClass);
             this.Controls.Add(this.classSchedPanel);
@@ -482,6 +600,8 @@
             this.classDisplayPanel2.PerformLayout();
             this.classDisplayPanel1.ResumeLayout(false);
             this.classDisplayPanel1.PerformLayout();
+            this.modifyClassPanel.ResumeLayout(false);
+            this.modifyClassPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,7 +640,16 @@
         private System.Windows.Forms.Label class5NameLabel;
         private System.Windows.Forms.Button btnAddClass;
         private System.Windows.Forms.Button btnEditClass;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel modifyClassPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox editClassDropdown;
+        private System.Windows.Forms.Label modifyClassLabel;
+        private System.Windows.Forms.Label classNameLabel;
+        private System.Windows.Forms.TextBox classNameTextBox;
+        private System.Windows.Forms.Label enterInfoLabel;
+        private System.Windows.Forms.Label classCodeLabel;
+        private System.Windows.Forms.TextBox classCodeTextBox;
+        private System.Windows.Forms.TextBox classLocTextBox;
     }
 }
 

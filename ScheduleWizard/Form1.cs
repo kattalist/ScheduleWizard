@@ -106,7 +106,17 @@ namespace ScheduleWizard
 
         private void btnAddClass_Click(object sender, EventArgs e)
         {
+            modifyClassLabel.Text = "Add a class";
+        }
 
+        private void btnEditClass_Click(object sender, EventArgs e)
+        {
+            modifyClassLabel.Text = "Edit a class";
+            editClassDropdown.Items.Clear();
+            foreach (Class c in User.activeUser.ClassList)
+            {
+                editClassDropdown.Items.Add($"{c.Code} - {c.Name}");
+            }
         }
     }
 }
