@@ -60,15 +60,35 @@
             this.btnAddClass = new System.Windows.Forms.Button();
             this.btnEditClass = new System.Windows.Forms.Button();
             this.modifyClassPanel = new System.Windows.Forms.Panel();
-            this.modifyClassLabel = new System.Windows.Forms.Label();
-            this.editClassDropdown = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.classCodeTextBox = new System.Windows.Forms.TextBox();
-            this.classCodeLabel = new System.Windows.Forms.Label();
-            this.enterInfoLabel = new System.Windows.Forms.Label();
-            this.classNameTextBox = new System.Windows.Forms.TextBox();
-            this.classNameLabel = new System.Windows.Forms.Label();
             this.classLocTextBox = new System.Windows.Forms.TextBox();
+            this.classNameLabel = new System.Windows.Forms.Label();
+            this.classNameTextBox = new System.Windows.Forms.TextBox();
+            this.enterInfoLabel = new System.Windows.Forms.Label();
+            this.classCodeLabel = new System.Windows.Forms.Label();
+            this.classCodeTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.editClassDropdown = new System.Windows.Forms.ComboBox();
+            this.modifyClassLabel = new System.Windows.Forms.Label();
+            this.classLocLabel = new System.Windows.Forms.Label();
+            this.enterTimesLabel = new System.Windows.Forms.Label();
+            this.time1DayBox = new System.Windows.Forms.ComboBox();
+            this.time1StartBox = new System.Windows.Forms.ComboBox();
+            this.time1EndBox = new System.Windows.Forms.ComboBox();
+            this.time2DayBox = new System.Windows.Forms.ComboBox();
+            this.time2StartBox = new System.Windows.Forms.ComboBox();
+            this.time2EndBox = new System.Windows.Forms.ComboBox();
+            this.time3DayBox = new System.Windows.Forms.ComboBox();
+            this.time3StartBox = new System.Windows.Forms.ComboBox();
+            this.time3EndBox = new System.Windows.Forms.ComboBox();
+            this.time4DayBox = new System.Windows.Forms.ComboBox();
+            this.time4StartBox = new System.Windows.Forms.ComboBox();
+            this.time4EndBox = new System.Windows.Forms.ComboBox();
+            this.time5DayBox = new System.Windows.Forms.ComboBox();
+            this.time5StartBox = new System.Windows.Forms.ComboBox();
+            this.time5EndBox = new System.Windows.Forms.ComboBox();
+            this.classApplyChangesButton = new System.Windows.Forms.Button();
+            this.classCancelButton = new System.Windows.Forms.Button();
+            this.classRemoveButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.classSchedPanel.SuspendLayout();
             this.classDisplayPanel5.SuspendLayout();
@@ -457,6 +477,26 @@
             // 
             // modifyClassPanel
             // 
+            this.modifyClassPanel.Controls.Add(this.classRemoveButton);
+            this.modifyClassPanel.Controls.Add(this.classCancelButton);
+            this.modifyClassPanel.Controls.Add(this.classApplyChangesButton);
+            this.modifyClassPanel.Controls.Add(this.time5EndBox);
+            this.modifyClassPanel.Controls.Add(this.time5StartBox);
+            this.modifyClassPanel.Controls.Add(this.time5DayBox);
+            this.modifyClassPanel.Controls.Add(this.time4EndBox);
+            this.modifyClassPanel.Controls.Add(this.time4StartBox);
+            this.modifyClassPanel.Controls.Add(this.time4DayBox);
+            this.modifyClassPanel.Controls.Add(this.time3EndBox);
+            this.modifyClassPanel.Controls.Add(this.time3StartBox);
+            this.modifyClassPanel.Controls.Add(this.time3DayBox);
+            this.modifyClassPanel.Controls.Add(this.time2EndBox);
+            this.modifyClassPanel.Controls.Add(this.time2StartBox);
+            this.modifyClassPanel.Controls.Add(this.time2DayBox);
+            this.modifyClassPanel.Controls.Add(this.time1EndBox);
+            this.modifyClassPanel.Controls.Add(this.time1StartBox);
+            this.modifyClassPanel.Controls.Add(this.time1DayBox);
+            this.modifyClassPanel.Controls.Add(this.enterTimesLabel);
+            this.modifyClassPanel.Controls.Add(this.classLocLabel);
             this.modifyClassPanel.Controls.Add(this.classLocTextBox);
             this.modifyClassPanel.Controls.Add(this.classNameLabel);
             this.modifyClassPanel.Controls.Add(this.classNameTextBox);
@@ -471,16 +511,79 @@
             this.modifyClassPanel.Size = new System.Drawing.Size(477, 649);
             this.modifyClassPanel.TabIndex = 4;
             // 
-            // modifyClassLabel
+            // classLocTextBox
             // 
-            this.modifyClassLabel.AutoSize = true;
-            this.modifyClassLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyClassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.modifyClassLabel.Location = new System.Drawing.Point(14, 8);
-            this.modifyClassLabel.Name = "modifyClassLabel";
-            this.modifyClassLabel.Size = new System.Drawing.Size(221, 45);
-            this.modifyClassLabel.TabIndex = 0;
-            this.modifyClassLabel.Text = "Modify a class";
+            this.classLocTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.classLocTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classLocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classLocTextBox.Location = new System.Drawing.Point(173, 235);
+            this.classLocTextBox.Name = "classLocTextBox";
+            this.classLocTextBox.Size = new System.Drawing.Size(291, 25);
+            this.classLocTextBox.TabIndex = 8;
+            // 
+            // classNameLabel
+            // 
+            this.classNameLabel.AutoSize = true;
+            this.classNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classNameLabel.Location = new System.Drawing.Point(93, 201);
+            this.classNameLabel.Name = "classNameLabel";
+            this.classNameLabel.Size = new System.Drawing.Size(74, 17);
+            this.classNameLabel.TabIndex = 7;
+            this.classNameLabel.Text = "Class name";
+            // 
+            // classNameTextBox
+            // 
+            this.classNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.classNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classNameTextBox.Location = new System.Drawing.Point(173, 198);
+            this.classNameTextBox.Name = "classNameTextBox";
+            this.classNameTextBox.Size = new System.Drawing.Size(291, 25);
+            this.classNameTextBox.TabIndex = 6;
+            // 
+            // enterInfoLabel
+            // 
+            this.enterInfoLabel.AutoSize = true;
+            this.enterInfoLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.enterInfoLabel.Location = new System.Drawing.Point(17, 121);
+            this.enterInfoLabel.Name = "enterInfoLabel";
+            this.enterInfoLabel.Size = new System.Drawing.Size(272, 30);
+            this.enterInfoLabel.TabIndex = 5;
+            this.enterInfoLabel.Text = "Enter your class information";
+            // 
+            // classCodeLabel
+            // 
+            this.classCodeLabel.AutoSize = true;
+            this.classCodeLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classCodeLabel.Location = new System.Drawing.Point(96, 164);
+            this.classCodeLabel.Name = "classCodeLabel";
+            this.classCodeLabel.Size = new System.Drawing.Size(71, 17);
+            this.classCodeLabel.TabIndex = 4;
+            this.classCodeLabel.Text = "Class code";
+            // 
+            // classCodeTextBox
+            // 
+            this.classCodeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.classCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classCodeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classCodeTextBox.Location = new System.Drawing.Point(173, 161);
+            this.classCodeTextBox.Name = "classCodeTextBox";
+            this.classCodeTextBox.Size = new System.Drawing.Size(291, 25);
+            this.classCodeTextBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(19, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Select a class to modify:";
             // 
             // editClassDropdown
             // 
@@ -495,79 +598,270 @@
             this.editClassDropdown.Size = new System.Drawing.Size(292, 25);
             this.editClassDropdown.TabIndex = 1;
             // 
-            // label1
+            // modifyClassLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(19, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Select a class to modify:";
+            this.modifyClassLabel.AutoSize = true;
+            this.modifyClassLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyClassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.modifyClassLabel.Location = new System.Drawing.Point(14, 8);
+            this.modifyClassLabel.Name = "modifyClassLabel";
+            this.modifyClassLabel.Size = new System.Drawing.Size(221, 45);
+            this.modifyClassLabel.TabIndex = 0;
+            this.modifyClassLabel.Text = "Modify a class";
             // 
-            // classCodeTextBox
+            // classLocLabel
             // 
-            this.classCodeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
-            this.classCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classCodeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.classCodeTextBox.Location = new System.Drawing.Point(173, 161);
-            this.classCodeTextBox.Name = "classCodeTextBox";
-            this.classCodeTextBox.Size = new System.Drawing.Size(291, 25);
-            this.classCodeTextBox.TabIndex = 3;
+            this.classLocLabel.AutoSize = true;
+            this.classLocLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classLocLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classLocLabel.Location = new System.Drawing.Point(79, 238);
+            this.classLocLabel.Name = "classLocLabel";
+            this.classLocLabel.Size = new System.Drawing.Size(88, 17);
+            this.classLocLabel.TabIndex = 9;
+            this.classLocLabel.Text = "Class location";
             // 
-            // classCodeLabel
+            // enterTimesLabel
             // 
-            this.classCodeLabel.AutoSize = true;
-            this.classCodeLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.classCodeLabel.Location = new System.Drawing.Point(96, 164);
-            this.classCodeLabel.Name = "classCodeLabel";
-            this.classCodeLabel.Size = new System.Drawing.Size(71, 17);
-            this.classCodeLabel.TabIndex = 4;
-            this.classCodeLabel.Text = "Class code";
+            this.enterTimesLabel.AutoSize = true;
+            this.enterTimesLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterTimesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.enterTimesLabel.Location = new System.Drawing.Point(17, 268);
+            this.enterTimesLabel.Name = "enterTimesLabel";
+            this.enterTimesLabel.Size = new System.Drawing.Size(298, 30);
+            this.enterTimesLabel.TabIndex = 10;
+            this.enterTimesLabel.Text = "Enter your class times (up to 5)";
             // 
-            // enterInfoLabel
+            // time1DayBox
             // 
-            this.enterInfoLabel.AutoSize = true;
-            this.enterInfoLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.enterInfoLabel.Location = new System.Drawing.Point(17, 121);
-            this.enterInfoLabel.Name = "enterInfoLabel";
-            this.enterInfoLabel.Size = new System.Drawing.Size(272, 30);
-            this.enterInfoLabel.TabIndex = 5;
-            this.enterInfoLabel.Text = "Enter your class information";
+            this.time1DayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time1DayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time1DayBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time1DayBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time1DayBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time1DayBox.FormattingEnabled = true;
+            this.time1DayBox.Location = new System.Drawing.Point(22, 301);
+            this.time1DayBox.Name = "time1DayBox";
+            this.time1DayBox.Size = new System.Drawing.Size(206, 25);
+            this.time1DayBox.TabIndex = 11;
             // 
-            // classNameTextBox
+            // time1StartBox
             // 
-            this.classNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
-            this.classNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.classNameTextBox.Location = new System.Drawing.Point(173, 198);
-            this.classNameTextBox.Name = "classNameTextBox";
-            this.classNameTextBox.Size = new System.Drawing.Size(291, 25);
-            this.classNameTextBox.TabIndex = 6;
+            this.time1StartBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time1StartBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time1StartBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time1StartBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time1StartBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time1StartBox.FormattingEnabled = true;
+            this.time1StartBox.Location = new System.Drawing.Point(234, 301);
+            this.time1StartBox.Name = "time1StartBox";
+            this.time1StartBox.Size = new System.Drawing.Size(112, 25);
+            this.time1StartBox.TabIndex = 12;
             // 
-            // classNameLabel
+            // time1EndBox
             // 
-            this.classNameLabel.AutoSize = true;
-            this.classNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.classNameLabel.Location = new System.Drawing.Point(93, 201);
-            this.classNameLabel.Name = "classNameLabel";
-            this.classNameLabel.Size = new System.Drawing.Size(74, 17);
-            this.classNameLabel.TabIndex = 7;
-            this.classNameLabel.Text = "Class name";
+            this.time1EndBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time1EndBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time1EndBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time1EndBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time1EndBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time1EndBox.FormattingEnabled = true;
+            this.time1EndBox.Location = new System.Drawing.Point(352, 301);
+            this.time1EndBox.Name = "time1EndBox";
+            this.time1EndBox.Size = new System.Drawing.Size(112, 25);
+            this.time1EndBox.TabIndex = 13;
             // 
-            // classLocTextBox
+            // time2DayBox
             // 
-            this.classLocTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
-            this.classLocTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classLocTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.classLocTextBox.Location = new System.Drawing.Point(173, 235);
-            this.classLocTextBox.Name = "classLocTextBox";
-            this.classLocTextBox.Size = new System.Drawing.Size(291, 25);
-            this.classLocTextBox.TabIndex = 8;
+            this.time2DayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time2DayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time2DayBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time2DayBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time2DayBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time2DayBox.FormattingEnabled = true;
+            this.time2DayBox.Location = new System.Drawing.Point(22, 332);
+            this.time2DayBox.Name = "time2DayBox";
+            this.time2DayBox.Size = new System.Drawing.Size(206, 25);
+            this.time2DayBox.TabIndex = 14;
+            // 
+            // time2StartBox
+            // 
+            this.time2StartBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time2StartBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time2StartBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time2StartBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time2StartBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time2StartBox.FormattingEnabled = true;
+            this.time2StartBox.Location = new System.Drawing.Point(234, 332);
+            this.time2StartBox.Name = "time2StartBox";
+            this.time2StartBox.Size = new System.Drawing.Size(112, 25);
+            this.time2StartBox.TabIndex = 15;
+            // 
+            // time2EndBox
+            // 
+            this.time2EndBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time2EndBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time2EndBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time2EndBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time2EndBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time2EndBox.FormattingEnabled = true;
+            this.time2EndBox.Location = new System.Drawing.Point(352, 332);
+            this.time2EndBox.Name = "time2EndBox";
+            this.time2EndBox.Size = new System.Drawing.Size(112, 25);
+            this.time2EndBox.TabIndex = 16;
+            // 
+            // time3DayBox
+            // 
+            this.time3DayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time3DayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time3DayBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time3DayBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time3DayBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time3DayBox.FormattingEnabled = true;
+            this.time3DayBox.Location = new System.Drawing.Point(22, 363);
+            this.time3DayBox.Name = "time3DayBox";
+            this.time3DayBox.Size = new System.Drawing.Size(206, 25);
+            this.time3DayBox.TabIndex = 17;
+            // 
+            // time3StartBox
+            // 
+            this.time3StartBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time3StartBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time3StartBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time3StartBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time3StartBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time3StartBox.FormattingEnabled = true;
+            this.time3StartBox.Location = new System.Drawing.Point(234, 363);
+            this.time3StartBox.Name = "time3StartBox";
+            this.time3StartBox.Size = new System.Drawing.Size(112, 25);
+            this.time3StartBox.TabIndex = 18;
+            // 
+            // time3EndBox
+            // 
+            this.time3EndBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time3EndBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time3EndBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time3EndBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time3EndBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time3EndBox.FormattingEnabled = true;
+            this.time3EndBox.Location = new System.Drawing.Point(352, 363);
+            this.time3EndBox.Name = "time3EndBox";
+            this.time3EndBox.Size = new System.Drawing.Size(112, 25);
+            this.time3EndBox.TabIndex = 19;
+            // 
+            // time4DayBox
+            // 
+            this.time4DayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time4DayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time4DayBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time4DayBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time4DayBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time4DayBox.FormattingEnabled = true;
+            this.time4DayBox.Location = new System.Drawing.Point(22, 394);
+            this.time4DayBox.Name = "time4DayBox";
+            this.time4DayBox.Size = new System.Drawing.Size(206, 25);
+            this.time4DayBox.TabIndex = 20;
+            // 
+            // time4StartBox
+            // 
+            this.time4StartBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time4StartBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time4StartBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time4StartBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time4StartBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time4StartBox.FormattingEnabled = true;
+            this.time4StartBox.Location = new System.Drawing.Point(234, 394);
+            this.time4StartBox.Name = "time4StartBox";
+            this.time4StartBox.Size = new System.Drawing.Size(112, 25);
+            this.time4StartBox.TabIndex = 21;
+            // 
+            // time4EndBox
+            // 
+            this.time4EndBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time4EndBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time4EndBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time4EndBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time4EndBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time4EndBox.FormattingEnabled = true;
+            this.time4EndBox.Location = new System.Drawing.Point(352, 394);
+            this.time4EndBox.Name = "time4EndBox";
+            this.time4EndBox.Size = new System.Drawing.Size(112, 25);
+            this.time4EndBox.TabIndex = 22;
+            // 
+            // time5DayBox
+            // 
+            this.time5DayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time5DayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time5DayBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time5DayBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time5DayBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time5DayBox.FormattingEnabled = true;
+            this.time5DayBox.Location = new System.Drawing.Point(22, 425);
+            this.time5DayBox.Name = "time5DayBox";
+            this.time5DayBox.Size = new System.Drawing.Size(206, 25);
+            this.time5DayBox.TabIndex = 23;
+            // 
+            // time5StartBox
+            // 
+            this.time5StartBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time5StartBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time5StartBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time5StartBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time5StartBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time5StartBox.FormattingEnabled = true;
+            this.time5StartBox.Location = new System.Drawing.Point(234, 425);
+            this.time5StartBox.Name = "time5StartBox";
+            this.time5StartBox.Size = new System.Drawing.Size(112, 25);
+            this.time5StartBox.TabIndex = 24;
+            // 
+            // time5EndBox
+            // 
+            this.time5EndBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(88)))), ((int)(((byte)(123)))));
+            this.time5EndBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.time5EndBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time5EndBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time5EndBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.time5EndBox.FormattingEnabled = true;
+            this.time5EndBox.Location = new System.Drawing.Point(352, 425);
+            this.time5EndBox.Name = "time5EndBox";
+            this.time5EndBox.Size = new System.Drawing.Size(112, 25);
+            this.time5EndBox.TabIndex = 25;
+            // 
+            // classApplyChangesButton
+            // 
+            this.classApplyChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classApplyChangesButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classApplyChangesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classApplyChangesButton.Location = new System.Drawing.Point(22, 532);
+            this.classApplyChangesButton.Name = "classApplyChangesButton";
+            this.classApplyChangesButton.Size = new System.Drawing.Size(145, 45);
+            this.classApplyChangesButton.TabIndex = 26;
+            this.classApplyChangesButton.Text = "Add class";
+            this.classApplyChangesButton.UseVisualStyleBackColor = true;
+            this.classApplyChangesButton.Click += new System.EventHandler(this.classApplyChangesButton_Click);
+            // 
+            // classCancelButton
+            // 
+            this.classCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classCancelButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classCancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classCancelButton.Location = new System.Drawing.Point(320, 532);
+            this.classCancelButton.Name = "classCancelButton";
+            this.classCancelButton.Size = new System.Drawing.Size(145, 45);
+            this.classCancelButton.TabIndex = 27;
+            this.classCancelButton.Text = "Cancel";
+            this.classCancelButton.UseVisualStyleBackColor = true;
+            // 
+            // classRemoveButton
+            // 
+            this.classRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classRemoveButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classRemoveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.classRemoveButton.Location = new System.Drawing.Point(172, 532);
+            this.classRemoveButton.Name = "classRemoveButton";
+            this.classRemoveButton.Size = new System.Drawing.Size(142, 45);
+            this.classRemoveButton.TabIndex = 28;
+            this.classRemoveButton.Text = "Remove class";
+            this.classRemoveButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -650,6 +944,26 @@
         private System.Windows.Forms.Label classCodeLabel;
         private System.Windows.Forms.TextBox classCodeTextBox;
         private System.Windows.Forms.TextBox classLocTextBox;
+        private System.Windows.Forms.Label classLocLabel;
+        private System.Windows.Forms.Label enterTimesLabel;
+        private System.Windows.Forms.ComboBox time5EndBox;
+        private System.Windows.Forms.ComboBox time5StartBox;
+        private System.Windows.Forms.ComboBox time5DayBox;
+        private System.Windows.Forms.ComboBox time4EndBox;
+        private System.Windows.Forms.ComboBox time4StartBox;
+        private System.Windows.Forms.ComboBox time4DayBox;
+        private System.Windows.Forms.ComboBox time3EndBox;
+        private System.Windows.Forms.ComboBox time3StartBox;
+        private System.Windows.Forms.ComboBox time3DayBox;
+        private System.Windows.Forms.ComboBox time2EndBox;
+        private System.Windows.Forms.ComboBox time2StartBox;
+        private System.Windows.Forms.ComboBox time2DayBox;
+        private System.Windows.Forms.ComboBox time1EndBox;
+        private System.Windows.Forms.ComboBox time1StartBox;
+        private System.Windows.Forms.ComboBox time1DayBox;
+        private System.Windows.Forms.Button classRemoveButton;
+        private System.Windows.Forms.Button classCancelButton;
+        private System.Windows.Forms.Button classApplyChangesButton;
     }
 }
 

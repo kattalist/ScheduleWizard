@@ -43,6 +43,10 @@ namespace ScheduleWizard
             ClassLocLabels.Add(this.class4LocLabel);
             ClassLocLabels.Add(this.class5LocLabel);
 
+            ComboBox[] TimeSlotDateFields = { time1DayBox, time2DayBox, time3DayBox, time4DayBox, time5DayBox };
+            ComboBox[] TimeSlotStartFields = { time1StartBox, time2StartBox, time3StartBox, time4StartBox, time5StartBox };
+            ComboBox[] TimeSlotEndFields = { time1EndBox, time2EndBox, time3EndBox, time4EndBox, time5EndBox };
+
             labelName.Text = User.activeUser.Name;
             var i = 0;
             
@@ -117,6 +121,28 @@ namespace ScheduleWizard
             {
                 editClassDropdown.Items.Add($"{c.Code} - {c.Name}");
             }
+        }
+
+        private void classApplyChangesButton_Click(object sender, EventArgs e)
+        {
+            if (classApplyChangesButton.Text.Equals("Add class"))
+            {
+                User.activeUser.ClassList.Add(new Class(classCodeTextBox.Text, classNameTextBox.Text, classLocTextBox.Text));
+                
+            }
+        }
+
+        private void AddDays(ComboBox box)
+        {
+            foreach (Day d in Enum.GetValues(typeof(Day)))
+            {
+                box.Items.Add(d.ToString());
+            }
+        }
+
+        private void AddTimes(ComboBox box)
+        {
+
         }
     }
 }
