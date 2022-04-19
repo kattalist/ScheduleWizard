@@ -58,6 +58,12 @@ namespace ScheduleWizard
                 ClassLocLabels[i].Text = slottedClass.Location;
                 i++;
             }
+            for (int j = 0; j < 5; j++)
+            {
+                AddDays(TimeSlotDateFields[j]);
+                AddTimes(TimeSlotStartFields[j]);
+                AddTimes(TimeSlotEndFields[j]);
+            }
             classSchedPanel.BringToFront();
             classSchedPanel.Show();
         }
@@ -142,7 +148,15 @@ namespace ScheduleWizard
 
         private void AddTimes(ComboBox box)
         {
+            // My attempt to iterate through all times rather than adding them manually (30 min increments from 12:00 AM to 11:30 PM)
 
+            for (int i = 0; i < 1440; i+= 30)
+            {
+                string timeType = i < 720 ? "AM" : "PM";
+                int hours = i % 720 == 0 ? 12 : (i % 720) / 60;
+                int mins = i % 60;
+                box.Items.Add($"{hours}:{mins} {timeType}");
+            }
         }
     }
 }
