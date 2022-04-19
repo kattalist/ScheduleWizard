@@ -15,6 +15,9 @@ namespace ScheduleWizard
         public List<Label> ClassIDLabels = new List<Label>();
         public List<Label> ClassNameLabels = new List<Label>();
         public List<Label> ClassLocLabels = new List<Label>();
+        ComboBox[] TimeSlotDateFields;
+        ComboBox[] TimeSlotStartFields;
+        ComboBox[] TimeSlotEndFields;
 
         public Form1()
         {
@@ -43,9 +46,9 @@ namespace ScheduleWizard
             ClassLocLabels.Add(this.class4LocLabel);
             ClassLocLabels.Add(this.class5LocLabel);
 
-            ComboBox[] TimeSlotDateFields = { time1DayBox, time2DayBox, time3DayBox, time4DayBox, time5DayBox };
-            ComboBox[] TimeSlotStartFields = { time1StartBox, time2StartBox, time3StartBox, time4StartBox, time5StartBox };
-            ComboBox[] TimeSlotEndFields = { time1EndBox, time2EndBox, time3EndBox, time4EndBox, time5EndBox };
+            TimeSlotDateFields = new ComboBox[] { time1DayBox, time2DayBox, time3DayBox, time4DayBox, time5DayBox };
+            TimeSlotStartFields = new ComboBox[] { time1StartBox, time2StartBox, time3StartBox, time4StartBox, time5StartBox };
+            TimeSlotEndFields = new ComboBox[] { time1EndBox, time2EndBox, time3EndBox, time4EndBox, time5EndBox };
 
             labelName.Text = User.activeUser.Name;
             var i = 0;
@@ -133,7 +136,14 @@ namespace ScheduleWizard
         {
             if (classApplyChangesButton.Text.Equals("Add class"))
             {
-                User.activeUser.ClassList.Add(new Class(classCodeTextBox.Text, classNameTextBox.Text, classLocTextBox.Text));
+                Class newClass = new Class(classCodeTextBox.Text, classNameTextBox.Text, classLocTextBox.Text);
+                for (int i = 0; i < 5; i++)
+                {
+                    if (TimeSlotDateFields[i].SelectedIndex != -1 && TimeSlotStartFields[i].SelectedIndex != -1 && TimeSlotEndFields[i].SelectedIndex != -1)
+                    {
+                        newClass.AddTimeSlot((Day)(i + 1), TimeSlotStartFields[i].SelectedIndex * 30, TimeSlotEndFields[i].SelectedIndex * 30);
+                    }
+                }
                 
             }
         }
@@ -153,9 +163,10 @@ namespace ScheduleWizard
             for (int i = 0; i < 1440; i+= 30)
             {
                 string timeType = i < 720 ? "AM" : "PM";
-                int hours = i % 720 == 0 ? 12 : (i % 720) / 60;
+                int hours = (i % 720) / 60 == 0 ? 12 : (i % 720) / 60;
                 int mins = i % 60;
-                box.Items.Add($"{hours}:{mins} {timeType}");
+                string minFormat = mins < 10 ? $"0{mins}" : mins.ToString();
+                box.Items.Add($"{hours}:{minFormat} {timeType}");
             }
         }
     }
