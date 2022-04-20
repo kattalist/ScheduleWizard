@@ -133,7 +133,7 @@ namespace ScheduleWizard
                 {
                     if (TimeSlotDateFields[i].SelectedIndex != -1 && TimeSlotStartFields[i].SelectedIndex != -1 && TimeSlotEndFields[i].SelectedIndex != -1)
                     {
-                        newClass.AddTimeSlot((Day)(i + 1), TimeSlotStartFields[i].SelectedIndex * 30, TimeSlotEndFields[i].SelectedIndex * 30);
+                        newClass.AddTimeSlot((Day)(i), TimeSlotStartFields[i].SelectedIndex * 30, TimeSlotEndFields[i].SelectedIndex * 30);
                     }
                 }
                 User.activeUser.addClass(newClass);
@@ -172,8 +172,17 @@ namespace ScheduleWizard
                 Class slottedClass = slot.Parent;
                 ClassIDLabels[i].Text = slottedClass.Code;
                 ClassNameLabels[i].Text = slottedClass.Name;
-                ClassLocLabels[i].Text = slottedClass.Location;
+                //ClassLocLabels[i].Text = slottedClass.Location;
+                ClassLocLabels[i].Text = slot.Day.ToString();
                 i++;
+            }
+        }
+
+        private void classRemoveButton_Click(object sender, EventArgs e)
+        {
+            if (editClassDropdown.SelectedIndex != -1)
+            {
+                User.activeUser.ClassList.RemoveAt(editClassDropdown.SelectedIndex);
             }
         }
     }
