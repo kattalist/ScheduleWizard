@@ -11,7 +11,7 @@ namespace ScheduleWizard
 {
     public class User
     {
-        public static User activeUser = User.ReadFromXML("JackFallows.xml");
+        public static User activeUser = User.ReadFromXML("activeuser.xml");
 
         // A user has a first and last name and a list of the classes they take, as well as a list of deadlines.
         public List<Class> ClassList = new List<Class>();
