@@ -133,7 +133,7 @@ namespace ScheduleWizard
                 {
                     if (TimeSlotDateFields[i].SelectedIndex != -1 && TimeSlotStartFields[i].SelectedIndex != -1 && TimeSlotEndFields[i].SelectedIndex != -1)
                     {
-                        newClass.AddTimeSlot((Day)(i), TimeSlotStartFields[i].SelectedIndex * 30, TimeSlotEndFields[i].SelectedIndex * 30);
+                        newClass.AddTimeSlot((Day)(TimeSlotDateFields[i].SelectedIndex), TimeSlotStartFields[i].SelectedIndex * 30, TimeSlotEndFields[i].SelectedIndex * 30);
                     }
                 }
                 User.activeUser.addClass(newClass);
