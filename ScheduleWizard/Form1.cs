@@ -51,16 +51,8 @@ namespace ScheduleWizard
             TimeSlotEndFields = new ComboBox[] { time1EndBox, time2EndBox, time3EndBox, time4EndBox, time5EndBox };
 
             labelName.Text = User.activeUser.Name;
-            var i = 0;
-            
-            foreach (ClassTimeSlot slot in User.activeUser.ClassesToday())
-            {
-                Class slottedClass = slot.Parent;
-                ClassIDLabels[i].Text = slottedClass.Code;
-                ClassNameLabels[i].Text = slottedClass.Name;
-                ClassLocLabels[i].Text = slottedClass.Location;
-                i++;
-            }
+            DisplayClassesToday();
+
             for (int j = 0; j < 5; j++)
             {
                 AddDays(TimeSlotDateFields[j]);
@@ -144,8 +136,9 @@ namespace ScheduleWizard
                         newClass.AddTimeSlot((Day)(i + 1), TimeSlotStartFields[i].SelectedIndex * 30, TimeSlotEndFields[i].SelectedIndex * 30);
                     }
                 }
-                
+                User.activeUser.addClass(newClass);
             }
+            DisplayClassesToday();
         }
 
         private void AddDays(ComboBox box)
@@ -167,6 +160,20 @@ namespace ScheduleWizard
                 int mins = i % 60;
                 string minFormat = mins < 10 ? $"0{mins}" : mins.ToString();
                 box.Items.Add($"{hours}:{minFormat} {timeType}");
+            }
+        }
+
+        private void DisplayClassesToday()
+        {
+            var i = 0;
+
+            foreach (ClassTimeSlot slot in User.activeUser.ClassesToday())
+            {
+                Class slottedClass = slot.Parent;
+                ClassIDLabels[i].Text = slottedClass.Code;
+                ClassNameLabels[i].Text = slottedClass.Name;
+                ClassLocLabels[i].Text = slottedClass.Location;
+                i++;
             }
         }
     }
