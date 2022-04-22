@@ -46,7 +46,7 @@ namespace ScheduleWizard
             {
                 foreach (ClassTimeSlot cts in c.TimeSlots)
                 {
-                    if (cts.Day == Day.Wednesday)
+                    if (cts.Day == (Day)curDayOfWeek)
                     {
                         classes.Add(cts);
                     }

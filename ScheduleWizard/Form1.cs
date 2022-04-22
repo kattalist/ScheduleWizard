@@ -166,14 +166,24 @@ namespace ScheduleWizard
         private void DisplayClassesToday()
         {
             var i = 0;
+            //First, hide all empty labels
+            for (int j = 0; j < 5; j++)
+            {
+                ClassIDLabels[j].Hide();
+                ClassNameLabels[j].Hide();
+                ClassLocLabels[j].Hide();
+            }
 
             foreach (ClassTimeSlot slot in User.activeUser.ClassesToday())
             {
                 Class slottedClass = slot.Parent;
+                ClassIDLabels[i].Show();
+                ClassNameLabels[i].Show();
+                ClassLocLabels[i].Show();
+
                 ClassIDLabels[i].Text = slottedClass.Code;
                 ClassNameLabels[i].Text = slottedClass.Name;
-                //ClassLocLabels[i].Text = slottedClass.Location;
-                ClassLocLabels[i].Text = slot.Day.ToString();
+                ClassLocLabels[i].Text = slottedClass.Location;
                 i++;
             }
         }
