@@ -852,6 +852,7 @@
             this.editClassDropdown.Name = "editClassDropdown";
             this.editClassDropdown.Size = new System.Drawing.Size(292, 25);
             this.editClassDropdown.TabIndex = 1;
+            this.editClassDropdown.SelectedIndexChanged += new System.EventHandler(this.editClassDropdown_SelectedIndexChanged);
             // 
             // modifyClassLabel
             // 

@@ -195,5 +195,20 @@ namespace ScheduleWizard
                 User.activeUser.ClassList.RemoveAt(editClassDropdown.SelectedIndex);
             }
         }
+
+        private void editClassDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Class selectedClass = User.activeUser.ClassList[editClassDropdown.SelectedIndex];
+            classCodeTextBox.Text = selectedClass.Code;
+            classNameTextBox.Text = selectedClass.Name;
+            classLocTextBox.Text = selectedClass.Location;
+            int timeSlotLen = selectedClass.TimeSlots.Count();
+            for (int i = 0; i < timeSlotLen; i++)
+            {
+                TimeSlotDateFields[i].SelectedIndex = (int)(selectedClass.TimeSlots[i].Day);
+                TimeSlotStartFields[i].SelectedIndex = selectedClass.TimeSlots[i].StartTime / 30;
+                TimeSlotEndFields[i].SelectedIndex = selectedClass.TimeSlots[i].EndTime / 30;
+            }
+        }
     }
 }
